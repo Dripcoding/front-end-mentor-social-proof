@@ -15,4 +15,5 @@
 .DS_Store
 
 #other
+dist
 node_modules

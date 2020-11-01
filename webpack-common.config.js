@@ -9,27 +9,32 @@ module.exports = {
         rules: [
             {
                 test: /\.scss|css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                use: [
+                    MiniCssExtractPlugin.loader, 
+                    'css-loader', 
+                    'sass-loader'
+                ]
             },
             {
                 test: /\.(png|svg|jpg|gif|ttf)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[path][name][contenthash].[ext]'
+                    name: '[name].[ext]',
+                    outputPath: 'assets/images'
                 }
             }
-        ]
+        ]   
     },
     plugins: [
-        new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new HtmlWebpackPlugin({
-            filename: 'main.js',
             hash: true,
-            path: path.resolve(__dirname, "dist"),
             scriptLoading: 'defer',
             template: "./src/index.html",
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            filename: "styles/[name].css"
+        })
     ],
     output: {
         filename: 'main.js',
