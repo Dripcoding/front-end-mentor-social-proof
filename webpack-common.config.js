@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
-    entry: './',
+    entry: './src/main.js',
     module: {
         rules: [
             {
@@ -13,7 +13,7 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|gif|ttf)$/,
-                loader: 'file=loader',
+                loader: 'file-loader',
                 options: {
                     name: '[path][name][contenthash].[ext]'
                 }
