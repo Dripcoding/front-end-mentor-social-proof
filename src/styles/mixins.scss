@@ -1,0 +1,29 @@
+@import './pallette.scss';
+
+// hero header
+@mixin social-proof-header {
+    color: $primaryTextColor;
+    font-family: Spartan;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    height: 154px; 
+    letter-spacing: -1.71px;
+    line-height: 48px;
+    text-align: left;
+    width: 445px;
+}
+
+// hero description
+@mixin social-proof-header-description {
+    font-family: Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    height: 75px;
+    letter-spacing: -0.5px;
+    line-height: 25px;
+    text-align: left;
+    width: 445px;
+}
+
