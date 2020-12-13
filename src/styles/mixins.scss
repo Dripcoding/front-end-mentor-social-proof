@@ -28,7 +28,7 @@
 }
 
 // hero star rating card
-@mixin social-proof-header-rating-card {
+@mixin social-proof-star-rating-card {
     font-family: Spartan;
     font-size: 13px;
     font-style: normal;
@@ -38,5 +38,18 @@
     line-height: 15px;
     text-align: left;
     width: 445px;
+}
+
+// testimonial cards
+@mixin social-proof-testimonial-rating-card {
+    font-family: Spartan;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    height: 234px;
+    letter-spacing: -0.2321428507566452px;
+    line-height: 22px;
+    text-align: left;
+    width: 350px;
 }
 
