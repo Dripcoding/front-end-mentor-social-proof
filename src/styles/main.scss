@@ -1,4 +1,5 @@
 @use 'mixins' as *;
+@use 'pallette' as *;
 
 html {
     height: 100vh;
@@ -25,8 +26,11 @@ main {
     width: 1440px;
     
     .mainCardContainer {
+        align-items: center;
         border: 2px solid green;    
+        display: flex;
         height: 235px;
+        justify-content: space-between;
         padding: 127px 165px;
         width: 1110px;
 
@@ -46,6 +50,61 @@ main {
             }
             p {
                 @include social-proof-header-description;
+            }
+        }
+        .mainCardContainer__ratingsContainer {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            justify-content: flex-start;
+            width: 540px;
+
+            p {
+                @include social-proof-star-rating-card;
+                vertical-align: middle;
+            }
+
+            .mainCardContainer__ratingCardOne, .mainCardContainer__ratingCardTwo, .mainCardContainer__ratingCardThree {
+                @include social-proof-star-rating-card;
+                align-items: center;
+                background-color: #F7F2F7;
+                display: flex;
+                justify-content: space-evenly;
+                padding-bottom: 20px;
+                padding-top: 20px;
+
+                p {
+                    align-items: center;
+                    color: #512051;
+                    display: flex;
+                    font-family: $Spartan;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 700;
+                    height: 15px;
+                    letter-spacing: 0px;
+                    line-height: 15px;
+                    text-align: left;
+                    width: fit-content;
+                }
+                .mainCardContainer__starContainer {
+                    @include social-proof-star-icon-container;
+                }
+            }
+            .mainCardContainer__ratingCardOne {
+                align-self: flex-start;
+                margin-bottom: 16px;
+            }
+            .mainCardContainer__ratingCardTwo {
+                align-self: center;
+                margin-bottom: 16px;
+            }
+            .mainCardContainer__ratingCardThree {
+                align-self: flex-end;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-bottom: 16px;
+
             }
         }
     }
