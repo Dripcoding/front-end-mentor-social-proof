@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 html {
     height: 100vh;
 
@@ -23,7 +25,29 @@ main {
     width: 1440px;
     
     .mainCardContainer {
-        border: 2px solid green;
+        border: 2px solid green;    
+        height: 235px;
+        padding: 127px 165px;
+        width: 1110px;
+
+        .mainCardContainer__heroContainer {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            height: 235px;
+            justify-content: flex-start;
+            width: 445px;
+
+            h1, p {
+                width: 100%
+            }
+            h1 {
+                @include social-proof-header;
+            }
+            p {
+                @include social-proof-header-description;
+            }
+        }
     }
     
     .secondaryCardContainer {
