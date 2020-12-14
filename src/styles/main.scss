@@ -2,19 +2,31 @@ html {
     height: 100vh;
 
     body {
+        align-items: center;
         border: 2px solid red;
-        height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        height: 100%;
         justify-content: center;
     }
 }
 
-.mainCardContainer {
-    border: 2px solid green;
-}
-
-.secondaryCardContainer {
-    border: 2px solid blue;
+main {
+    align-items: center;
+    background-image: url('../assets/images/bg-pattern-top-desktop.svg'), url('../assets/images/bg-pattern-bottom-desktop.svg'),;
+    background-position: top left, bottom right;
+    background-repeat: no-repeat no-repeat;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    justify-content: flex-start;
+    width: 1440px;
+    
+    .mainCardContainer {
+        border: 2px solid green;
+    }
+    
+    .secondaryCardContainer {
+        border: 2px solid blue;
+    }
 }
