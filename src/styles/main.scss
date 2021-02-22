@@ -1,5 +1,9 @@
 @use 'palette' as *;
 
+* {
+	box-sizing: border-box;
+}
+
 html,
 body {
 	width: 100vw;
@@ -16,11 +20,13 @@ body {
 main {
 	border: 2px solid red;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-self: center;
 	align-items: center;
 	width: 1440px;
 	height: 800px;
+
+	padding: 127px 165px;
 }
 
 .heroSection {
@@ -59,6 +65,30 @@ main {
 			width: 445px;
 			background-color: $light-purple-background;
 			color: $purple;
+		}
+	}
+
+	.testimonialCardContainer {
+		border: 2px solid blue;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		height: 234px;
+		width: 350px;
+		padding: 40px 32px;
+
+		.testimonialCardContainer__cardHeader {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+
+			img {
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+			}
 		}
 	}
 }
