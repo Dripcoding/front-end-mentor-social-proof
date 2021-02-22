@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+@import './pallette.scss';
+
+$Spartan: "Spartan", sans-serif;
+
+
+// hero header
+@mixin social-proof-header {
+    color: $primaryTextColor;
+    font-family: $Spartan;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    height: 154px; 
+    letter-spacing: -1.71px;
+    line-height: 48px;
+    text-align: left;
+    width: 445px;
+}
+
+// hero description
+@mixin social-proof-header-description {
+    color: $secondaryTextColor;
+    font-family: $Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    height: 75px;
+    letter-spacing: -0.5px;
+    line-height: 25px;
+    text-align: left;
+    width: 445px;
+}
+
+// hero star rating card
+@mixin social-proof-star-rating-card {
+    border-radius: 8px;
+    height: 56px;
+    width: 445px;
+}
+@mixin social-proof-star-icon-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 117px;
+    height: 16px;
+}
+
+// testimonial cards
+@mixin social-proof-testimonial-rating-card {
+    font-family: $Spartan;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    height: 234px;
+    letter-spacing: -0.2321428507566452px;
+    line-height: 22px;
+    text-align: left;
+    width: 350px;
+}
+

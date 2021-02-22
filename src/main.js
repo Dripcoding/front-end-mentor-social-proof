@@ -10,6 +10,6 @@ import './assets/images/icon-star.svg'
 import './assets/images/image-irene.jpg'
 
 // styles
-import './styles/main.scss'
 import './styles/reset.scss'
+import './styles/main.scss'
 
