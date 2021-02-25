@@ -81,6 +81,14 @@ main {
 			@include social-proof-card-text;
 		}
 	}
+
+	div:nth-child(2) {
+		margin-left: 48px;
+	}
+
+	div:last-child {
+		margin-left: 96px;
+	}
 }
 
 .testimonialCardContainer {
