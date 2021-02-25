@@ -1,4 +1,5 @@
 @use 'palette' as *;
+@use './mixins.scss' as *;
 
 * {
 	box-sizing: border-box;
@@ -36,59 +37,63 @@ main {
 	align-items: center;
 	height: 235px;
 	width: 1110px;
+}
 
-	.heroSection__titleContainer {
-		border: 1px solid black;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
-		width: 445px;
-		height: 235px;
+.heroSection__titleContainer {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 445px;
+	height: 235px;
+
+	h1 {
+		@include social-proof-header;
 	}
+}
 
-	.heroSection__starRatingsContainer {
-		border: 1px solid black;
+.heroSection__starRatingsContainer {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	width: 540px;
+
+	.heroSection__ratingCardContainer {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		height: 200px;
-		width: 540px;
-
-		.heroSection__ratingCardContainer {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			height: 56px;
-			width: 445px;
-			background-color: $secondaryTextColor;
-			color: $primaryTextColor;
-		}
+		height: 56px;
+		width: 445px;
+		// background-color: $secondaryTextColor;
+		// color: $primaryTextColor;
 	}
+}
 
-	.testimonialCardContainer {
-		border: 2px solid blue;
+.testimonialCardContainer {
+	border: 2px solid blue;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	height: 234px;
+	width: 350px;
+	padding: 40px 32px;
+
+	.heroSection__cardHeader {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		justify-content: flex-start;
-		align-items: flex-start;
-		height: 234px;
-		width: 350px;
-		padding: 40px 32px;
+		align-items: center;
 
-		.heroSection__cardHeader {
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-start;
-			align-items: center;
-
-			img {
-				border-radius: 50%;
-				width: 40px;
-				height: 40px;
-			}
+		img {
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
 		}
 	}
 }
