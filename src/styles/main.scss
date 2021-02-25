@@ -67,14 +67,19 @@ main {
 	width: 540px;
 
 	.heroSection__ratingCardContainer {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		height: 56px;
-		width: 445px;
+		@include social-proof-star-rating-card;
+		border: 1px solid black;
+
 		// background-color: $secondaryTextColor;
 		// color: $primaryTextColor;
+
+		div {
+			@include social-proof-star-icon-container;
+		}
+
+		p {
+			@include social-proof-card-text;
+		}
 	}
 }
 
