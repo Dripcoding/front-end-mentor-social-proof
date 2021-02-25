@@ -51,6 +51,10 @@ main {
 	h1 {
 		@include social-proof-header;
 	}
+
+	p {
+		@include social-proof-header-description;
+	}
 }
 
 .heroSection__starRatingsContainer {
