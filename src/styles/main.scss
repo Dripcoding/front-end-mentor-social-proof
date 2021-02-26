@@ -19,7 +19,6 @@ body {
 }
 
 main {
-	border: 2px solid red;
 	display: flex;
 	flex-direction: column;
 	justify-self: center;
@@ -33,9 +32,9 @@ main {
 .heroSection {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-	height: 235px;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: 266px;
 	width: 1110px;
 }
 
@@ -73,7 +72,7 @@ main {
 		// background-color: $secondaryTextColor;
 		// color: $primaryTextColor;
 
-		div {
+		.heroSection__starContainer {
 			@include social-proof-star-icon-container;
 		}
 
@@ -91,15 +90,8 @@ main {
 	}
 }
 
-.testimonialCardContainer {
-	border: 2px solid blue;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	height: 234px;
-	width: 350px;
-	padding: 40px 32px;
+.heroSection__testimonialCardContainer {
+	@include social-proof-testimonial-rating-card;
 
 	.heroSection__cardHeader {
 		display: flex;

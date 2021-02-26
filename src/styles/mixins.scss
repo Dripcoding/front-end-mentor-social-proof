@@ -68,6 +68,15 @@ $Spartan: "Spartan", sans-serif;
 
 // testimonial cards
 @mixin social-proof-testimonial-rating-card {
+	background-color: $primaryTextColor;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	height: 234px;
+	width: 350px;
+	padding: 40px 32px;
 	font-family: $Spartan;
 	font-size: 13px;
 	font-style: normal;
@@ -76,5 +85,4 @@ $Spartan: "Spartan", sans-serif;
 	letter-spacing: -0.2321428507566452px;
 	line-height: 22px;
 	text-align: left;
-	width: 350px;
 }
