@@ -35,6 +35,14 @@ main {
 	align-items: flex-start;
 	height: 266px;
 	width: 1110px;
+
+	.heroSection__testimonialCardContainer:nth-child(2) {
+		align-self: center;
+	}
+
+	.heroSection__testimonialCardContainer:nth-child(3) {
+		align-self: flex-end;
+	}
 }
 
 .heroSection__titleContainer {
@@ -88,6 +96,12 @@ main {
 
 .heroSection__testimonialCardContainer {
 	@include mixins.social-proof-testimonial-rating-card;
+
+	p {
+		color: $testimonialCardPrimaryTextColor;
+		height: 88px;
+		width: 286px;
+	}
 }
 
 .heroSection__cardHeader {
