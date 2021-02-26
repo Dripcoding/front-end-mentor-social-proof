@@ -1,5 +1,5 @@
 @use 'palette' as *;
-@use './mixins.scss' as *;
+@use './mixins.scss' as mixins;
 
 * {
 	box-sizing: border-box;
@@ -25,7 +25,6 @@ main {
 	align-items: center;
 	width: 1440px;
 	height: 800px;
-
 	padding: 127px 165px;
 }
 
@@ -48,11 +47,11 @@ main {
 	height: 235px;
 
 	h1 {
-		@include social-proof-header;
+		@include mixins.social-proof-header;
 	}
 
 	p {
-		@include social-proof-header-description;
+		@include mixins.social-proof-header-description;
 	}
 }
 
@@ -65,22 +64,6 @@ main {
 	height: 200px;
 	width: 540px;
 
-	.heroSection__ratingCardContainer {
-		@include social-proof-star-rating-card;
-		border: 1px solid black;
-
-		// background-color: $secondaryTextColor;
-		// color: $primaryTextColor;
-
-		.heroSection__starContainer {
-			@include social-proof-star-icon-container;
-		}
-
-		p {
-			@include social-proof-card-text;
-		}
-	}
-
 	div:nth-child(2) {
 		margin-left: 48px;
 	}
@@ -90,19 +73,48 @@ main {
 	}
 }
 
+.heroSection__ratingCardContainer {
+	@include mixins.social-proof-star-rating-card;
+	border: 1px solid black;
+
+	.heroSection__starContainer {
+		@include mixins.social-proof-star-icon-container;
+	}
+
+	p {
+		@include mixins.social-proof-card-text;
+	}
+}
+
 .heroSection__testimonialCardContainer {
-	@include social-proof-testimonial-rating-card;
+	@include mixins.social-proof-testimonial-rating-card;
+}
 
-	.heroSection__cardHeader {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
+.heroSection__cardHeader {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 26px;
+	width: 160px;
+	height: 40px;
 
-		img {
-			border-radius: 50%;
-			width: 40px;
-			height: 40px;
+	img {
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+	}
+
+	.heroSection__customerName {
+		@include mixins.social-proof-customer-name;
+
+		p:nth-child(1) {
+			color: $testimonialCardPrimaryTextColor;
+			margin-bottom: 5px;
+		}
+
+		p:nth-child(2) {
+			color: $testimonialCardSecondaryTextcolor;
+			font-weight: 400;
 		}
 	}
 }

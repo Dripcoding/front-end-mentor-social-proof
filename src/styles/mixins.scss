@@ -86,3 +86,16 @@ $Spartan: "Spartan", sans-serif;
 	line-height: 22px;
 	text-align: left;
 }
+
+@mixin social-proof-customer-name {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	font-family: $Spartan;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 15px;
+	letter-spacing: 0px;
+}
