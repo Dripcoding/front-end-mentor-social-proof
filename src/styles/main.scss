@@ -16,6 +16,11 @@ body {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	background-image: url("../assets/images/bg-pattern-top-desktop.svg"),
+		url("../assets/images/bg-pattern-bottom-desktop.svg");
+	background-position: top left, bottom right;
+	background-repeat: no-repeat no-repeat;
+	background-attachment: fixed fixed;
 }
 
 main {
@@ -46,7 +51,6 @@ main {
 }
 
 .heroSection__titleContainer {
-	border: 1px solid black;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -64,7 +68,6 @@ main {
 }
 
 .heroSection__starRatingsContainer {
-	border: 1px solid black;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -72,8 +75,13 @@ main {
 	height: 200px;
 	width: 540px;
 
+	div:nth-child(1) {
+		margin-bottom: 16px;
+	}
+
 	div:nth-child(2) {
 		margin-left: 48px;
+		margin-bottom: 16px;
 	}
 
 	div:last-child {
@@ -83,7 +91,6 @@ main {
 
 .heroSection__ratingCardContainer {
 	@include mixins.social-proof-star-rating-card;
-	border: 1px solid black;
 
 	.heroSection__starContainer {
 		@include mixins.social-proof-star-icon-container;
