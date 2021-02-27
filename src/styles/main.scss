@@ -48,10 +48,29 @@ main {
 
 	h1 {
 		@include mixins.social-proof-header;
+
+		@include mixins.text(
+			$primaryTextColor,
+			48px,
+			normal,
+			700,
+			-1.71px,
+			48px,
+			left
+		);
 	}
 
 	p {
 		@include mixins.social-proof-header-description;
+		@include mixins.text(
+			$secondaryTextColor,
+			15px,
+			normal,
+			500,
+			-0.5px,
+			25px,
+			left
+		);
 	}
 }
 
@@ -83,6 +102,15 @@ main {
 
 	p {
 		@include mixins.social-proof-card-text;
+		@include mixins.text(
+			$primaryTextColor,
+			13px,
+			normal,
+			700px,
+			0px,
+			15px,
+			left
+		);
 	}
 }
 
@@ -91,6 +119,16 @@ main {
 
 	p {
 		color: $testimonialCardPrimaryTextColor;
+
+		@include mixins.text(
+			$testimonialCardPrimaryTextColor,
+			13px,
+			normal,
+			500,
+			-0.2321428507566452px,
+			22px,
+			left
+		);
 		height: 88px;
 		width: 286px;
 	}
@@ -110,6 +148,7 @@ main {
 
 	.heroSection__customerName {
 		@include mixins.social-proof-customer-name;
+		@include mixins.text(inherit, 13px, normal, 700, 0px, 15px, left);
 
 		p:nth-child(1) {
 			color: $testimonialCardPrimaryTextColor;

@@ -10,17 +10,9 @@ $Spartan: "Spartan", sans-serif;
 	align-items: $align-items;
 }
 
-@mixin text(
-	$color,
-	$family,
-	$style,
-	$weight,
-	$spacing,
-	$lineHeight,
-	$textAlign
-) {
+@mixin text($color, $size, $style, $weight, $spacing, $lineHeight, $textAlign) {
 	color: $color;
-	font-family: $family;
+	font-family: $Spartan;
 	font-size: $size;
 	font-style: $style;
 	font-weight: $weight;
