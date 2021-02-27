@@ -10,6 +10,25 @@ $Spartan: "Spartan", sans-serif;
 	align-items: $align-items;
 }
 
+@mixin text(
+	$color,
+	$family,
+	$style,
+	$weight,
+	$spacing,
+	$lineHeight,
+	$textAlign
+) {
+	color: $color;
+	font-family: $family;
+	font-size: $size;
+	font-style: $style;
+	font-weight: $weight;
+	letter-spacing: $spacing;
+	line-height: $lineHeight;
+	text-align: $textAlign;
+}
+
 // hero header
 @mixin social-proof-header {
 	color: $primaryTextColor;
