@@ -85,7 +85,7 @@ main {
 }
 
 .heroSection__starRatingsContainer {
-	@include mixins.flex(column, center, center);
+	@include mixins.flex(column, center, flex-start);
 	height: 200px;
 	width: 540px;
 
@@ -104,7 +104,13 @@ main {
 }
 
 .heroSection__ratingCardContainer {
-	@include mixins.social-proof-star-rating-card;
+	@include mixins.flex(row, space-between, center);
+	background-color: $starRatingBackgroundColor;
+	border-radius: 8px;
+	height: 56px;
+	width: 445px;
+	padding-left: 32px;
+	padding-right: 90px;
 
 	.heroSection__starContainer {
 		@include mixins.social-proof-star-icon-container;

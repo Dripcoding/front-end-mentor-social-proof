@@ -21,21 +21,6 @@ $Spartan: "Spartan", sans-serif;
 	text-align: $textAlign;
 }
 
-// hero star rating card
-@mixin social-proof-star-rating-card {
-	background-color: $starRatingBackgroundColor;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	border-radius: 8px;
-	height: 56px;
-	width: 445px;
-	justify-content: space-between;
-	padding-left: 32px;
-	padding-right: 90px;
-}
-
 // hero star rating card text
 @mixin social-proof-card-text {
 	color: $primaryTextColor;
