@@ -34,14 +34,6 @@ $Spartan: "Spartan", sans-serif;
 	height: 15px;
 }
 
-@mixin social-proof-star-icon-container {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	width: 117px;
-	height: 16px;
-}
-
 // testimonial cards
 @mixin social-proof-testimonial-rating-card {
 	background-color: $primaryTextColor;

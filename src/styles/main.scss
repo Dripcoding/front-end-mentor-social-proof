@@ -113,8 +113,10 @@ main {
 	padding-right: 90px;
 
 	.heroSection__starContainer {
-		@include mixins.social-proof-star-icon-container;
+		@include mixins.flex(row, space-evenly, center);
 		margin-bottom: 0 !important;
+		width: 117px;
+		height: 16px;
 	}
 
 	p {
