@@ -163,8 +163,10 @@ main {
 	}
 
 	.heroSection__customerName {
-		@include mixins.social-proof-customer-name;
+		@include mixins.flex(column, flex-end, flex-start);
 		@include mixins.text(inherit, 13px, normal, 700, 0px, 15px, left);
+		width: 97px;
+		height: 34px;
 
 		p {
 			height: 15px;
