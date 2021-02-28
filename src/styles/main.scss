@@ -25,11 +25,20 @@ main {
 	width: 1440px;
 	height: 800px;
 	padding: 127px 165px;
+
+	section:nth-child(1) {
+		height: 235px;
+		margin-bottom: 72px;
+	}
+
+	section:nth-child(2) {
+		height: 266px;
+		flex-shrink: 0;
+	}
 }
 
 .heroSection {
 	@include mixins.flex(row, space-between, flex-start);
-	height: 266px;
 	width: 1110px;
 
 	.heroSection__testimonialCardContainer:nth-child(2) {
@@ -42,9 +51,8 @@ main {
 }
 
 .heroSection__titleContainer {
-	@include mixins.flex(column, flex-start, flex-start);
+	@include mixins.flex(column, space-between, flex-start);
 	width: 445px;
-	height: 235px;
 
 	h1 {
 		@include mixins.social-proof-header;
@@ -58,6 +66,7 @@ main {
 			48px,
 			left
 		);
+		margin-bottom: 6px;
 	}
 
 	p {
@@ -98,6 +107,7 @@ main {
 
 	.heroSection__starContainer {
 		@include mixins.social-proof-star-icon-container;
+		margin-bottom: 0 !important;
 	}
 
 	p {
@@ -149,6 +159,11 @@ main {
 	.heroSection__customerName {
 		@include mixins.social-proof-customer-name;
 		@include mixins.text(inherit, 13px, normal, 700, 0px, 15px, left);
+
+		p {
+			height: 15px;
+			width: max-content;
+		}
 
 		p:nth-child(1) {
 			color: $testimonialCardPrimaryTextColor;
