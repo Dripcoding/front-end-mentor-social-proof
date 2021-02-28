@@ -55,8 +55,6 @@ main {
 	width: 445px;
 
 	h1 {
-		@include mixins.social-proof-header;
-
 		@include mixins.text(
 			$primaryTextColor,
 			48px,
@@ -66,6 +64,8 @@ main {
 			48px,
 			left
 		);
+		height: 154px;
+		width: 445px;
 		margin-bottom: 6px;
 	}
 
