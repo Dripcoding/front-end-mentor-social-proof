@@ -70,7 +70,6 @@ main {
 	}
 
 	p {
-		@include mixins.social-proof-header-description;
 		@include mixins.text(
 			$secondaryTextColor,
 			15px,
@@ -80,6 +79,8 @@ main {
 			25px,
 			left
 		);
+		height: 75px;
+		width: 445px;
 	}
 }
 

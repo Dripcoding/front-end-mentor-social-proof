@@ -21,19 +21,6 @@ $Spartan: "Spartan", sans-serif;
 	text-align: $textAlign;
 }
 
-// hero description
-@mixin social-proof-header-description {
-	color: $secondaryTextColor;
-	font-family: $Spartan;
-	font-size: 15px;
-	font-style: normal;
-	font-weight: 500;
-	height: 75px;
-	letter-spacing: -0.5px;
-	line-height: 25px;
-	width: 445px;
-}
-
 // hero star rating card
 @mixin social-proof-star-rating-card {
 	background-color: $starRatingBackgroundColor;
