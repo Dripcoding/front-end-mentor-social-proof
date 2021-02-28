@@ -120,21 +120,18 @@ main {
 	}
 
 	p {
-		@include mixins.social-proof-card-text;
-		@include mixins.text(
-			$primaryTextColor,
-			13px,
-			normal,
-			700px,
-			0px,
-			15px,
-			left
-		);
+		@include mixins.text($primaryTextColor, 13px, normal, 700, 0px, 15px, left);
+		height: 15px;
 	}
 }
 
 .heroSection__testimonialCardContainer {
-	@include mixins.social-proof-testimonial-rating-card;
+	@include mixins.flex(column, flex-start, flex-start);
+	background-color: $primaryTextColor;
+	border-radius: 8px;
+	height: 234px;
+	width: 350px;
+	padding: 40px 32px;
 
 	p {
 		color: $testimonialCardPrimaryTextColor;

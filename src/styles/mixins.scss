@@ -21,40 +21,6 @@ $Spartan: "Spartan", sans-serif;
 	text-align: $textAlign;
 }
 
-// hero star rating card text
-@mixin social-proof-card-text {
-	color: $primaryTextColor;
-	font-family: $Spartan;
-	font-size: 13px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 15px;
-	letter-spacing: 0px;
-	text-align: left;
-	height: 15px;
-}
-
-// testimonial cards
-@mixin social-proof-testimonial-rating-card {
-	background-color: $primaryTextColor;
-	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	height: 234px;
-	width: 350px;
-	padding: 40px 32px;
-	font-family: $Spartan;
-	font-size: 13px;
-	font-style: normal;
-	font-weight: 500;
-	height: 234px;
-	letter-spacing: -0.2321428507566452px;
-	line-height: 22px;
-	text-align: left;
-}
-
 @mixin social-proof-customer-name {
 	display: flex;
 	flex-direction: column;
