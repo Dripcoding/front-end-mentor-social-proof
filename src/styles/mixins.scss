@@ -20,3 +20,25 @@ $Spartan: "Spartan", sans-serif;
 	line-height: $lineHeight;
 	text-align: $textAlign;
 }
+
+// break-point variables
+$breakpoint-med: 1150px;
+$breakpoint-med-small: 900px;
+$breakpoint-small: 400px;
+
+// media-query mixin
+@mixin screen($size, $pixels: $breakpoint-small) {
+	@if $size == "small" {
+		@media screen and (max-width: $breakpoint-small) {
+			@content;
+		}
+	} @else if $size == "med-small" {
+		@media screen and (max-width: $breakpoint-med-small) {
+			@content;
+		}
+	} @else if $size == "med" {
+		@media screen and (max-width: $breakpoint-med) {
+			@content;
+		}
+	}
+}
