@@ -27,7 +27,7 @@ main {
 
 	section:nth-child(1) {
 		height: 235px;
-		margin-bottom: 72px;
+		margin-bottom: 49px;
 	}
 
 	section:nth-child(2) {
@@ -37,14 +37,18 @@ main {
 
 	@include mixins.screen("med", mixins.$breakpoint-med) {
 		@include mixins.flex(column, flex-start, center);
-
 		width: 375px;
 		height: 1530px;
 		padding: 80px 24px;
 
 		section:nth-child(1) {
-			width: 327px;
-			height: 102px;
+			width: 100%;
+			height: auto;
+		}
+
+		section:nth-child(2) {
+			width: 100%;
+			height: auto;
 		}
 	}
 }
