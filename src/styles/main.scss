@@ -57,6 +57,12 @@ main {
 			height: auto;
 		}
 	}
+
+	@include mixins.screen("small", mixins.$breakpoint-small) {
+		section:nth-child(1) {
+			width: 90%;
+		}
+	}
 }
 
 .heroSection {
@@ -154,6 +160,15 @@ main {
 			height: 100px;
 		}
 	}
+
+	@include mixins.screen("small", mixins.$breakpoint-small) {
+		align-items: center;
+
+		h1,
+		p {
+			width: inherit;
+		}
+	}
 }
 
 .heroSection__starRatingsContainer {
@@ -177,7 +192,7 @@ main {
 	@include mixins.screen("med", mixins.$breakpoint-med) {
 		@include mixins.flex(column, flex-start, center);
 		height: 266px;
-		width: 327px;
+		width: 100%;
 
 		div.heroSection__ratingCardContainer {
 			@include mixins.flex(column, center, center);
