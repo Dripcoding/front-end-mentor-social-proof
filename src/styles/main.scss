@@ -157,8 +157,8 @@ main {
 		height: 266px;
 		width: 327px;
 
-		div {
-			@include mixins.flex(column, flex-start, center);
+		div.heroSection__ratingCardContainer {
+			@include mixins.flex(column, center, center);
 			width: 327px;
 			height: 78px;
 		}
@@ -192,11 +192,20 @@ main {
 		margin-bottom: 0 !important;
 		width: 117px;
 		height: 16px;
+
+		@include mixins.screen("med", mixins.$breakpoint-med) {
+			margin-bottom: 16px !important;
+		}
 	}
 
 	p {
 		@include mixins.text($primaryTextColor, 13px, normal, 700, 0px, 15px, left);
 		height: 15px;
+	}
+
+	@include mixins.screen("med", mixins.$breakpoint-med) {
+		@include mixins.flex(column, center, center);
+		padding: 0;
 	}
 }
 
