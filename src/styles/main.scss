@@ -101,6 +101,7 @@ main {
 
 	@include mixins.screen("med", mixins.$breakpoint-med) {
 		width: 100%;
+		margin-bottom: 40px;
 
 		h1 {
 			@include mixins.text(
@@ -149,6 +150,31 @@ main {
 
 	div:last-child {
 		margin-left: 96px;
+	}
+
+	@include mixins.screen("med", mixins.$breakpoint-med) {
+		@include mixins.flex(column, flex-start, center);
+		height: 266px;
+		width: 327px;
+
+		div {
+			@include mixins.flex(column, flex-start, center);
+			width: 327px;
+			height: 78px;
+		}
+
+		div:nth-child(1) {
+			margin-bottom: 16px;
+		}
+
+		div:nth-child(2) {
+			margin-left: 0;
+			margin-bottom: 16px;
+		}
+
+		div:nth-child(3) {
+			margin-left: 0;
+		}
 	}
 }
 
