@@ -59,7 +59,8 @@ main {
 	}
 
 	@include mixins.screen("small", mixins.$breakpoint-small) {
-		section:nth-child(1) {
+		section:nth-child(1),
+		section:nth-child(2) {
 			width: 90%;
 		}
 	}
@@ -90,6 +91,12 @@ main {
 
 		.heroSection__testimonialCardContainer:nth-child(3) {
 			align-self: center;
+		}
+	}
+
+	@include mixins.screen("small", mixins.$breakpoint-small) {
+		.heroSection__testimonialCardContainer {
+			width: 100%;
 		}
 	}
 }
@@ -279,6 +286,12 @@ main {
 	@include mixins.screen("med", mixins.$breakpoint-med) {
 		width: 327px;
 		height: 248px;
+	}
+
+	@include mixins.screen("small", mixins.$breakpoint-small) {
+		p {
+			width: 95%;
+		}
 	}
 }
 
