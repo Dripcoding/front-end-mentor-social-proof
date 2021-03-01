@@ -17,7 +17,6 @@ body {
 		url("../assets/images/bg-pattern-bottom-desktop.svg");
 	background-position: top left, bottom right;
 	background-repeat: no-repeat no-repeat;
-	background-attachment: fixed fixed;
 }
 
 main {
@@ -47,6 +46,10 @@ main {
 
 	.heroSection__testimonialCardContainer:nth-child(3) {
 		align-self: flex-end;
+	}
+
+	@include mixins.screen("med", mixins.$breakpoint-med) {
+		@include mixins.flex(column, flex-start, center);
 	}
 }
 
@@ -81,6 +84,22 @@ main {
 		);
 		height: 75px;
 		width: 445px;
+	}
+
+	@include mixins.screen("med", mixins.$breakpoint-med) {
+		h1 {
+			@include mixins.text(
+				$primaryTextColor,
+				32px,
+				normal,
+				700,
+				-1.1428571939468384px,
+				32px,
+				center
+			);
+			width: 327px;
+			height: 102px;
+		}
 	}
 }
 
