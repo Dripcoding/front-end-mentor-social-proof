@@ -213,6 +213,12 @@ main {
 			margin-left: 0;
 		}
 	}
+
+	@include mixins.screen("small", mixins.$breakpoint-small) {
+		div.heroSection__ratingCardContainer {
+			width: 90%;
+		}
+	}
 }
 
 .heroSection__ratingCardContainer {
