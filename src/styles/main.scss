@@ -67,6 +67,18 @@ main {
 
 	@include mixins.screen("med", mixins.$breakpoint-med) {
 		@include mixins.flex(column, flex-start, center);
+
+		.heroSection__testimonialCardContainer:nth-child(1) {
+			margin-bottom: 16px;
+		}
+
+		.heroSection__testimonialCardContainer:nth-child(2) {
+			margin-bottom: 16px;
+		}
+
+		.heroSection__testimonialCardContainer:nth-child(3) {
+			align-self: center;
+		}
 	}
 }
 
@@ -235,6 +247,11 @@ main {
 		);
 		height: 88px;
 		width: 286px;
+	}
+
+	@include mixins.screen("med", mixins.$breakpoint-med) {
+		width: 327px;
+		height: 248px;
 	}
 }
 
