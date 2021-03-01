@@ -34,6 +34,19 @@ main {
 		height: 266px;
 		flex-shrink: 0;
 	}
+
+	@include mixins.screen("med", mixins.$breakpoint-med) {
+		@include mixins.flex(column, flex-start, center);
+
+		width: 375px;
+		height: 1530px;
+		padding: 80px 24px;
+
+		section:nth-child(1) {
+			width: 327px;
+			height: 102px;
+		}
+	}
 }
 
 .heroSection {
@@ -87,6 +100,8 @@ main {
 	}
 
 	@include mixins.screen("med", mixins.$breakpoint-med) {
+		width: 100%;
+
 		h1 {
 			@include mixins.text(
 				$primaryTextColor,
@@ -99,6 +114,21 @@ main {
 			);
 			width: 327px;
 			height: 102px;
+			margin-bottom: 18px;
+		}
+
+		p {
+			@include mixins.text(
+				$secondaryTextColor,
+				15px,
+				normal,
+				500,
+				-0.5px,
+				25px,
+				center
+			);
+			width: 327px;
+			height: 100px;
 		}
 	}
 }
